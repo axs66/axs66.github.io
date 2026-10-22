@@ -53,23 +53,6 @@ Icon: https://axs66.github.io/pro/icon/gravitation.png
 Name: Gravitation 重力感应
 Sileodepiction: https://axs66.github.io/pro/sileodepiction/gravitation/js.json
 
-Package: com.Axs.wechatsong
-Version: 2.5.6
-Architecture: iphoneos-arm64
-Maintainer: Axs
-Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 12.0)
-Filename: ./debs/com.Axs.wechatsong_2.5.6_iphoneos-arm64.deb
-Size: 71424
-MD5sum: 72216a2654cf06089586f5c6e0e09fb8
-SHA1: 779cd0de0ee8536cd3591bf6a8ca9929a3d50f28
-SHA256: d5de015dc6d9c25d4a1429c90307c7376333d26a31cd2c68bd051475de7ba75b
-Section: 微信插件
-Description: 点歌封面自定义，结合源里面的抖音音频url插件，可以实现在微信点歌，播放你选择抖音音乐。操作方法见抖音音频url插件。
-Author: A
-Icon: https://axs66.github.io/pro/icon/wechat.png
-Name: 点歌封面自定义
-Sileodepiction: https://axs66.github.io/pro/sileodepiction/wechatsong/js.json
-
 Package: com.Axs.yuanjiao
 Version: 1.8.6-END
 Architecture: iphoneos-arm64
