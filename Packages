@@ -35,6 +35,24 @@ Icon: https://axs66.github.io/pro/icon/eneko.png
 Name: Eneko 动态壁纸
 Sileodepiction: https://axs66.github.io/pro/sileodepiction/eneko/js.json
 
+Package: com.Axs.gravitation
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: Axs
+Installed-Size: 532
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader
+Filename: ./debs/com.Axs.gravitation_1.0.0_iphoneos-arm64.deb
+Size: 71448
+MD5sum: e6c0b985e86dbdec169fc42fafec3f94
+SHA1: 934ef92a2cde3dd46bc4b9dee6b3a6d5ee15d909
+SHA256: 0fe972057966e1fed980dfaa5fc542acd2334a55728ced4934d51728a7966cba
+Section: Axs-Tweaks
+Description: Shake the phone once on the desktop, and the app will start a gravity-sensing dance; shake the phone again to return to normal. Only supports iOS 15.0-16.6.1 systems
+Author: Axs
+Icon: https://axs66.github.io/pro/icon/gravitation.png
+Name: Gravitation 重力感应
+Sileodepiction: https://axs66.github.io/pro/sileodepiction/gravitation/js.json
+
 Package: com.Axs.yuanjiao
 Version: 1.8.6-END
 Architecture: iphoneos-arm64
