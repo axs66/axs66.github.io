@@ -1,0 +1,47 @@
+{
+	"class": "FeaturedBannersView",
+	"itemSize": "{260, 160}",
+	"itemCornerRadius": 5,
+	"banners": [
+		{
+			"url": "http://axs66.github.io/pro/images/ewm.png",
+			"title": "",
+			"package": "com.axs.sileo"
+		},
+		{
+			"url": "http://axs66.github.io/pro/images/ios16dao.png",
+			"title": "动态岛",
+			"package": "com.axs.ios16dao"
+		},
+		{
+			"url": "http://axs66.github.io/pro/images/screenshellpro.png",
+			"title": "录屏套壳",
+			"package": "com.axs.screenshellpro"
+		},
+		{
+			"url": "http://axs66.github.io/pro/images/newfeature.png",
+			"title": "NewFeature",
+			"package": "com.axs.newfeature.core"
+		},
+		{
+			"url": "http://axs66.github.io/pro/images/wechat.png",
+			"title": "全局圆角",
+			"package": "com.axs.yuanjiao"
+		},
+		{
+			"url": "http://axs66.github.io/pro/images/dy.png",
+			"title": "AwemePro",
+			"package": "com.axs.awemepro"
+		},
+		{
+			"url": "http://axs66.github.io/pro/images/notifyisland.png",
+			"title": "消息上岛",
+			"package": "com.axs.notifyisland"
+		},
+		{
+			"url": "http://axs66.github.io/pro/images/svp.png",
+			"title": "Stheno分屏",
+			"package": "com.axs.stheno"
+		}
+	]
+}
