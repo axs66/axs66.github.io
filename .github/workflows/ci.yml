@@ -1,0 +1,111 @@
+name: Deploy static content to Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  actions: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Dependencies
+        run: |
+          sudo apt update -qq
+          sudo apt install -y dpkg-dev bzip2 xz-utils zstd
+
+      - name: Generate Packages
+        run: |
+          rm -f ./Packages ./Packages.bz2 ./Packages.gz ./Packages.xz ./Packages.zst
+          dpkg-scanpackages -m ./debs > ./Packages
+          bzip2 -fks Packages
+          gzip -fk Packages
+          xz -f -k -9e Packages
+          zstd -f -19 -k Packages -o Packages.zst
+          ls -l Packages*
+
+      - name: Commit updated Packages
+        run: |
+          git config --local user.name "github-actions"
+          git config --local user.email "actions@github.com"
+          git add Packages Packages.bz2 Packages.gz Packages.xz Packages.zst
+          git commit -m "Update Packages" || echo "No changes to commit"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git HEAD:main
+
+      - name: Check Pages build type
+        id: pages-check
+        uses: actions/github-script@v7
+        with:
+          script: |
+            try {
+              const { data } = await github.rest.repos.getPages({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+              });
+              core.setOutput('build_type', data.build_type);
+              console.log(`Pages build_type: ${data.build_type}`);
+            } catch (e) {
+              core.setOutput('build_type', 'unknown');
+              console.log(`Cannot read Pages config: ${e.message}`);
+            }
+
+      - name: Setup Pages
+        if: steps.pages-check.outputs.build_type == 'workflow'
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        if: steps.pages-check.outputs.build_type == 'workflow'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        if: steps.pages-check.outputs.build_type == 'workflow'
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Cleanup old workflow runs
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const runs = await github.rest.actions.listWorkflowRunsForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: context.workflow,
+              per_page: 100,
+            });
+
+            const runsToDelete = runs.data.workflow_runs
+              .filter(run => run.id !== context.runId && run.status === 'completed')
+              .slice(3, 100);
+
+            if (runsToDelete.length === 0) {
+              console.log("No old workflow runs to delete.");
+            }
+
+            for (const run of runsToDelete) {
+              await github.rest.actions.deleteWorkflowRun({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                run_id: run.id,
+              });
+              console.log(`Deleted old workflow run ${run.id}`);
+            }
