@@ -6,6 +6,10 @@ on:
     types: 
       - completed
 
+permissions:
+  contents: write
+  actions: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,8 +18,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
-          token: ${{ secrets.PAT_TOKEN }}  # 确保与 GitHub Secrets 中的名称一致
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install Dependencies
         if: success()
@@ -49,11 +53,10 @@ jobs:
       - name: Push Changes
         if: success() && github.ref == 'refs/heads/main'  # 确保在主分支上推送
         env:
-          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}  # 确保与 GitHub Secrets 中的名称一致
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # 使用 PAT 进行身份验证
-          git remote set-url origin https://x-access-token:${PAT_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          git push origin main  # 根据实际分支名称修改，例如 main 或 master
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          git push origin main
 
       - name: Download remove_all_actions
         if: success()
@@ -64,7 +67,7 @@ jobs:
       - name: Remove All Old Actions
         if: success()
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}  # 使用 PAT 替代默认的 GITHUB_TOKEN
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
         run: |
           remove_all_actions
