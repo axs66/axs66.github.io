@@ -17,24 +17,6 @@ Icon: https://axs66.github.io/pro/icon/cellbadge.png
 Name: CellBadge 系统设置前缀图标
 Sileodepiction: https://axs66.github.io/pro/sileodepiction/cellbadge/js.json
 
-Package: com.Axs.eneko
-Version: 1.5.1
-Architecture: iphoneos-arm64
-Maintainer: Axs
-Installed-Size: 440
-Depends: firmware (>= 15.0), mobilesubstrate, preferenceloader
-Filename: ./debs/com.Axs.eneko_1.5.1_iphoneos-arm64.deb
-Size: 60684
-MD5sum: e0d3633e1399e64d2d2e7b944e1886ca
-SHA1: 05316aa7968aca827229462091d7fa8710840180
-SHA256: 99153dac29a40ee53a33cf2b0769ef4729482903e0fb509ad6a235b4702c7fa7
-Section: Axs-Tweaks
-Description: 壁纸插件，将你喜欢的视频设置成桌面或者锁屏壁纸，需要安装onesettings收纳插件，在本源里面搜索onesettings安装即可。
-Author: Traurige & Axs
-Icon: https://axs66.github.io/pro/icon/eneko.png
-Name: Eneko 动态壁纸
-Sileodepiction: https://axs66.github.io/pro/sileodepiction/eneko/js.json
-
 Package: com.Axs.gravitation
 Version: 1.0.0
 Architecture: iphoneos-arm64
@@ -286,6 +268,30 @@ Sileodepiction: https://axs66.github.io/pro/sileodepiction/bigtime/js.json
 
 Package: com.axs.bigtime
 Version: 5.2.0-81
+Architecture: iphoneos-arm
+Maintainer: Axs <qiaozhani000@163.com>
+Installed-Size: 1032
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 15.0), preferenceloader
+Conflicts: com.axs.screenlocktime
+Filename: ./debs/com.axs.bigtime_5.2.0-81_iphoneos-arm.deb
+Size: 145016
+MD5sum: 468272e7c218a941eb44c520a4c373f5
+SHA1: 48e5d662fbcd9b09cb365b69d98a799b21d9a9dc
+SHA256: 74e2d16047a341d9ab560c99bde5dec43c6e6c8f526ef6efca1ac5572c596531
+Section: Axs-Tweaks
+Description: 一个简单的锁屏时钟插件，支持在设置面板导入或选择 OTF、TTF 字体，素材目录为 /var/mobile/Axs/字体素材。
+ * 1.锁屏大字时钟玻璃效果，隐藏系统时间（锁屏时）;
+ * 2.支持锁屏时钟启用开关、帧率上限和垂直偏移调节;
+ * 3.支持玻璃边缘、模糊、厚度和折射调节;
+ * 4.支持浅色/深色染色强度与深浅模式覆盖;
+ * 5.支持 iOS 16+ 可变字体粗细、大小、宽度、高度和柔和度调节。
+Author: Axs <qiaozhani000@163.com>
+Icon: https://axs66.github.io/pro/icon/bigtime.png
+Name: BigTime
+Sileodepiction: https://axs66.github.io/pro/sileodepiction/bigtime/js.json
+
+Package: com.axs.bigtime
+Version: 5.2.0-81
 Architecture: iphoneos-arm64e
 Maintainer: Axs <qiaozhani000@163.com>
 Installed-Size: 1032
@@ -308,29 +314,26 @@ Icon: https://axs66.github.io/pro/icon/bigtime.png
 Name: BigTime
 Sileodepiction: https://axs66.github.io/pro/sileodepiction/bigtime/js.json
 
-Package: com.axs.bigtime
-Version: 5.2.0-81
-Architecture: iphoneos-arm
-Maintainer: Axs <qiaozhani000@163.com>
-Installed-Size: 1032
-Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 15.0), preferenceloader
-Conflicts: com.axs.screenlocktime
-Filename: ./debs/com.axs.bigtime_5.2.0-81_iphoneos-arm.deb
-Size: 145016
-MD5sum: 468272e7c218a941eb44c520a4c373f5
-SHA1: 48e5d662fbcd9b09cb365b69d98a799b21d9a9dc
-SHA256: 74e2d16047a341d9ab560c99bde5dec43c6e6c8f526ef6efca1ac5572c596531
+Package: com.axs.classicfolders
+Version: 5.2.0-25
+Architecture: iphoneos-arm64
+Maintainer: Axs
+Installed-Size: 576
+Depends: mobilesubstrate, preferenceloader, firmware(>=15.0)
+Filename: ./debs/com.axs.classicfolders_5.2.0-25_iphoneos-arm64.deb
+Size: 68056
+MD5sum: 5c4fc465770d99e3a0c0c63fec812edb
+SHA1: 5fa563b4d883f26b7fe15034603bd0a10bf662f7
+SHA256: c93ddc8cae50ec7d8f1997d49a0e437783fdd1f381a1019a77d37990983d8e1c
 Section: Axs-Tweaks
-Description: 一个简单的锁屏时钟插件，支持在设置面板导入或选择 OTF、TTF 字体，素材目录为 /var/mobile/Axs/字体素材。
- * 1.锁屏大字时钟玻璃效果，隐藏系统时间（锁屏时）;
- * 2.支持锁屏时钟启用开关、帧率上限和垂直偏移调节;
- * 3.支持玻璃边缘、模糊、厚度和折射调节;
- * 4.支持浅色/深色染色强度与深浅模式覆盖;
- * 5.支持 iOS 16+ 可变字体粗细、大小、宽度、高度和柔和度调节。
-Author: Axs <qiaozhani000@163.com>
-Icon: https://axs66.github.io/pro/icon/bigtime.png
-Name: BigTime
-Sileodepiction: https://axs66.github.io/pro/sileodepiction/bigtime/js.json
+Description: 让 iOS 15+ 的桌面文件夹按经典 macOS 风格原位展开。
+ * 1. 点开文件夹时在图标原位弹出半透明玻璃面板，桌面图标随面板重排、淡出
+ * 2. 支持重命名、轻点空白关闭、启动应用自动收起
+ * 3. 支持导入图片、GIF、静音视频作为文件夹面板背景
+Author: Axs
+Icon: https://axs66.github.io/pro/icon/ClassicFolders3.png
+Name: ClassicFolders
+Sileodepiction: https://axs66.github.io/pro/sileodepiction/classicfolders/js.json
 
 Package: com.axs.clipboard
 Version: 5.2.0-179
@@ -487,15 +490,15 @@ Sileodepiction: https://axs66.github.io/pro/sileodepiction/ios16dao/js.json
 
 Package: com.axs.ipslog
 Version: 5.2.0-31
-Architecture: iphoneos-arm64
+Architecture: iphoneos-arm64e
 Maintainer: Axs <qiaozhani000@163.com>
 Installed-Size: 512
 Depends: preferenceloader
-Filename: ./debs/com.axs.ipslog_5.2.0-31_iphoneos-arm64.deb
-Size: 87630
-MD5sum: fba662bc47c8159b3fbe82076e7f3d73
-SHA1: 2f77e56fb8f4804ef64d9efd141ff0e71e49977d
-SHA256: 0d899012456e9acc3542ec4385a9e0a956e1beaea7153f74aafe080be57542a3
+Filename: ./debs/com.axs.ipslog_5.2.0-31_iphoneos-arm64e.deb
+Size: 87864
+MD5sum: 127031f60618f90c275312aad0899841
+SHA1: 80a1684c6c34a57438d39a03a62b3b1558be6836
+SHA256: 3ce1c25f9a5dcb8eb3e3b2d5ede15a5af641638f8871b053018c7d504000aa18
 Section: Axs-Tweaks
 Description: 设置内一键查看与分析设备上的 .ips 崩溃日志，快速定位崩溃原因。
  * 崩溃日志查看器：按进程聚合、按时间倒序、关键字搜索、可筛选分类、可一键清空日志
@@ -508,15 +511,15 @@ Sileodepiction: https://axs66.github.io/pro/sileodepiction/ipslog/js.json
 
 Package: com.axs.ipslog
 Version: 5.2.0-31
-Architecture: iphoneos-arm64e
+Architecture: iphoneos-arm64
 Maintainer: Axs <qiaozhani000@163.com>
 Installed-Size: 512
 Depends: preferenceloader
-Filename: ./debs/com.axs.ipslog_5.2.0-31_iphoneos-arm64e.deb
-Size: 87864
-MD5sum: 127031f60618f90c275312aad0899841
-SHA1: 80a1684c6c34a57438d39a03a62b3b1558be6836
-SHA256: 3ce1c25f9a5dcb8eb3e3b2d5ede15a5af641638f8871b053018c7d504000aa18
+Filename: ./debs/com.axs.ipslog_5.2.0-31_iphoneos-arm64.deb
+Size: 87630
+MD5sum: fba662bc47c8159b3fbe82076e7f3d73
+SHA1: 2f77e56fb8f4804ef64d9efd141ff0e71e49977d
+SHA256: 0d899012456e9acc3542ec4385a9e0a956e1beaea7153f74aafe080be57542a3
 Section: Axs-Tweaks
 Description: 设置内一键查看与分析设备上的 .ips 崩溃日志，快速定位崩溃原因。
  * 崩溃日志查看器：按进程聚合、按时间倒序、关键字搜索、可筛选分类、可一键清空日志
@@ -539,6 +542,30 @@ Size: 170666
 MD5sum: f6c70239ea5d2211521e2614514150fd
 SHA1: 96a05ab09f81798a7a6bc43e839615e818b86d51
 SHA256: 8bd22603e86ba3fe1e44b078b9954738f0236055fc254c5f9dbb5fdf003978d1
+Section: Axs-Tweaks
+Description: 键盘文本编辑工具栏（可置于键盘上方或键盘下方，复制/粘贴/剪切/撤销/全选等快捷操作）+ 炫彩键盘（点击光效、键盘背景配色、候选词变色）。
+ * 1. 工具栏动作：全选、复制、粘贴、剪贴板、剪切、撤销、清空、光标左移、光标右移、换行、收起键盘
+ * 2. 工具栏位置：键盘上方或键盘下方
+ * 3. 每个按钮的点击与四个滑动方向可各自绑定动作，动作显示名可自定义，改动立即生效、无需注销
+ * 4. 键盘外观：点击光效、候选词变色；键盘背景色分浅色/深色设置，点行用系统取色器选色（可调透明度）
+ * 5. 剪贴板需要安装 Clipboard 插件，才能调出面板
+Author: Axs <qiaozhani000@163.com>
+Icon: https://axs66.github.io/pro/icon/keyboardtools.png
+Name: KeyboardTools
+Sileodepiction: https://axs66.github.io/pro/sileodepiction/keyboardtools/js.json
+
+Package: com.axs.keyboardtools
+Version: 5.2.0-196
+Architecture: iphoneos-arm64
+Maintainer: Axs <qiaozhani000@163.com>
+Installed-Size: 1348
+Depends: firmware (>= 15.0), mobilesubstrate, preferenceloader
+Conflicts: com.axs.colorfulkeyboard
+Filename: ./debs/com.axs.keyboardtools_5.2.0-196_iphoneos-arm64.deb
+Size: 237472
+MD5sum: 402f8227c8b85807a7cce25d24f60127
+SHA1: 65a13044e58f7e6fc5adf491ce33ccaba89e3690
+SHA256: c72bf9896ccf271b1f13c4b891eeed6a2e140f239ce085fe7206735550631e24
 Section: Axs-Tweaks
 Description: 键盘文本编辑工具栏（可置于键盘上方或键盘下方，复制/粘贴/剪切/撤销/全选等快捷操作）+ 炫彩键盘（点击光效、键盘背景配色、候选词变色）。
  * 1. 工具栏动作：全选、复制、粘贴、剪贴板、剪切、撤销、清空、光标左移、光标右移、换行、收起键盘
@@ -981,6 +1008,33 @@ Size: 68756
 MD5sum: 62d412e63ad0014bfabbee2a527749a2
 SHA1: e449a8a9e6ceb985b80c180dda0e0ad81d05eae5
 SHA256: 682c0de9641abc4e856d2ab886b4f73bd63adff47679619e212f3261faeeb65b
+Section: Axs-Tweaks
+Description: 集中收纳统一管理越狱插件与第三方 App 设置，支持插件自定义名称和图标。
+ * 设置首页同组并排两个入口：越狱插件 + 应用软件
+ * 自动隐藏其他插件的首页独立入口，整组收纳系统第三方 App 设置
+ * 越狱插件面板递归聚合所有已装插件设置
+ * 应用软件面板收录第三方 App 设置入口（点击仍进原生设置页）
+ * 支持 Prefs:root=TWEAKS_CELL / TWEAKS_APPS_CELL 深链直达
+ * 「附加功能」新增屏蔽部件与维修记录（隐藏非原装电池、维修记录相关提示行）
+ * 「附加功能」新增屏蔽系统更新提示（隐藏设置首页「现有 iOS xx 可用」行）
+ * 「附加功能」新增自定义插件名称与图标，图标放进 /var/mobile/Axs/TweaksHub/ 即可用
+Author: Axs <qiaozhani000@163.com>
+Icon: https://axs66.github.io/pro/icon/tweakshub.png
+Name: TweaksHub
+Sileodepiction: https://axs66.github.io/pro/sileodepiction/tweakshub/js.json
+
+Package: com.axs.tweakshub
+Version: 5.2.0-92
+Architecture: iphoneos-arm64
+Maintainer: Axs <qiaozhani000@163.com>
+Installed-Size: 728
+Depends: mobilesubstrate, preferenceloader
+Conflicts: com.nightwind.onesettings, com.creaturecoding.shuffle, com.sop.settingsrevamp, com.hk.settingsrevamp, com.dao.settingsrevamp, byg.iosios.net.settingsrevamp
+Filename: ./debs/com.axs.tweakshub_5.2.0-92_iphoneos-arm64.deb
+Size: 72696
+MD5sum: 56c00d1f4d0c5de1fa71c673ad634d8c
+SHA1: 450a0096bacf4e2f1b3b9e728090538b96649858
+SHA256: a056b8b5e79d72fbe6e99227c84c18cb599abcd6393d5f79fe4b768aa8b495c4
 Section: Axs-Tweaks
 Description: 集中收纳统一管理越狱插件与第三方 App 设置，支持插件自定义名称和图标。
  * 设置首页同组并排两个入口：越狱插件 + 应用软件
