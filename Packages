@@ -268,16 +268,16 @@ Sileodepiction: https://axs66.github.io/pro/sileodepiction/bigtime/js.json
 
 Package: com.axs.bigtime
 Version: 5.2.0-81
-Architecture: iphoneos-arm
+Architecture: iphoneos-arm64e
 Maintainer: Axs <qiaozhani000@163.com>
 Installed-Size: 1032
 Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 15.0), preferenceloader
 Conflicts: com.axs.screenlocktime
-Filename: ./debs/com.axs.bigtime_5.2.0-81_iphoneos-arm.deb
-Size: 145016
-MD5sum: 468272e7c218a941eb44c520a4c373f5
-SHA1: 48e5d662fbcd9b09cb365b69d98a799b21d9a9dc
-SHA256: 74e2d16047a341d9ab560c99bde5dec43c6e6c8f526ef6efca1ac5572c596531
+Filename: ./debs/com.axs.bigtime_5.2.0-81_iphoneos-arm64e.deb
+Size: 144500
+MD5sum: bcccf90e5b5852551b21807f1c75089a
+SHA1: 4ac80d151025d2a451c23461369b2aa636d46b00
+SHA256: 9fdc2194804ab4c7de25e6387e92ac993405eb38c45cdf017da041b8d61dee86
 Section: Axs-Tweaks
 Description: 一个简单的锁屏时钟插件，支持在设置面板导入或选择 OTF、TTF 字体，素材目录为 /var/mobile/Axs/字体素材。
  * 1.锁屏大字时钟玻璃效果，隐藏系统时间（锁屏时）;
@@ -292,16 +292,16 @@ Sileodepiction: https://axs66.github.io/pro/sileodepiction/bigtime/js.json
 
 Package: com.axs.bigtime
 Version: 5.2.0-81
-Architecture: iphoneos-arm64e
+Architecture: iphoneos-arm
 Maintainer: Axs <qiaozhani000@163.com>
 Installed-Size: 1032
 Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 15.0), preferenceloader
 Conflicts: com.axs.screenlocktime
-Filename: ./debs/com.axs.bigtime_5.2.0-81_iphoneos-arm64e.deb
-Size: 144500
-MD5sum: bcccf90e5b5852551b21807f1c75089a
-SHA1: 4ac80d151025d2a451c23461369b2aa636d46b00
-SHA256: 9fdc2194804ab4c7de25e6387e92ac993405eb38c45cdf017da041b8d61dee86
+Filename: ./debs/com.axs.bigtime_5.2.0-81_iphoneos-arm.deb
+Size: 145016
+MD5sum: 468272e7c218a941eb44c520a4c373f5
+SHA1: 48e5d662fbcd9b09cb365b69d98a799b21d9a9dc
+SHA256: 74e2d16047a341d9ab560c99bde5dec43c6e6c8f526ef6efca1ac5572c596531
 Section: Axs-Tweaks
 Description: 一个简单的锁屏时钟插件，支持在设置面板导入或选择 OTF、TTF 字体，素材目录为 /var/mobile/Axs/字体素材。
  * 1.锁屏大字时钟玻璃效果，隐藏系统时间（锁屏时）;
@@ -544,15 +544,15 @@ Sileodepiction: https://axs66.github.io/pro/sileodepiction/ios16dao/js.json
 
 Package: com.axs.ipslog
 Version: 5.2.0-31
-Architecture: iphoneos-arm64e
+Architecture: iphoneos-arm64
 Maintainer: Axs <qiaozhani000@163.com>
 Installed-Size: 512
 Depends: preferenceloader
-Filename: ./debs/com.axs.ipslog_5.2.0-31_iphoneos-arm64e.deb
-Size: 87864
-MD5sum: 127031f60618f90c275312aad0899841
-SHA1: 80a1684c6c34a57438d39a03a62b3b1558be6836
-SHA256: 3ce1c25f9a5dcb8eb3e3b2d5ede15a5af641638f8871b053018c7d504000aa18
+Filename: ./debs/com.axs.ipslog_5.2.0-31_iphoneos-arm64.deb
+Size: 87630
+MD5sum: fba662bc47c8159b3fbe82076e7f3d73
+SHA1: 2f77e56fb8f4804ef64d9efd141ff0e71e49977d
+SHA256: 0d899012456e9acc3542ec4385a9e0a956e1beaea7153f74aafe080be57542a3
 Section: Axs-Tweaks
 Description: 设置内一键查看与分析设备上的 .ips 崩溃日志，快速定位崩溃原因。
  * 崩溃日志查看器：按进程聚合、按时间倒序、关键字搜索、可筛选分类、可一键清空日志
@@ -565,15 +565,15 @@ Sileodepiction: https://axs66.github.io/pro/sileodepiction/ipslog/js.json
 
 Package: com.axs.ipslog
 Version: 5.2.0-31
-Architecture: iphoneos-arm64
+Architecture: iphoneos-arm64e
 Maintainer: Axs <qiaozhani000@163.com>
 Installed-Size: 512
 Depends: preferenceloader
-Filename: ./debs/com.axs.ipslog_5.2.0-31_iphoneos-arm64.deb
-Size: 87630
-MD5sum: fba662bc47c8159b3fbe82076e7f3d73
-SHA1: 2f77e56fb8f4804ef64d9efd141ff0e71e49977d
-SHA256: 0d899012456e9acc3542ec4385a9e0a956e1beaea7153f74aafe080be57542a3
+Filename: ./debs/com.axs.ipslog_5.2.0-31_iphoneos-arm64e.deb
+Size: 87864
+MD5sum: 127031f60618f90c275312aad0899841
+SHA1: 80a1684c6c34a57438d39a03a62b3b1558be6836
+SHA256: 3ce1c25f9a5dcb8eb3e3b2d5ede15a5af641638f8871b053018c7d504000aa18
 Section: Axs-Tweaks
 Description: 设置内一键查看与分析设备上的 .ips 崩溃日志，快速定位崩溃原因。
  * 崩溃日志查看器：按进程聚合、按时间倒序、关键字搜索、可筛选分类、可一键清空日志
@@ -1050,6 +1050,24 @@ Icon: https://axs66.github.io/pro/icon/switchicon.png
 Name: Switch Icon
 Sileodepiction: https://axs66.github.io/pro/sileodepiction/switchicon/js.json
 
+Package: com.axs.tendiesx
+Version: 5.2.0-15
+Architecture: iphoneos-arm64
+Maintainer: Axs
+Installed-Size: 776
+Depends: mobilesubstrate, preferenceloader
+Filename: ./debs/com.axs.tendiesx_5.2.0-15_iphoneos-arm64.deb
+Size: 128448
+MD5sum: 23a75e30e36fb00544d33a168e8f4df6
+SHA1: 0055fffc921abdb98afb9e432d34bd06fc15f75d
+SHA256: 726527d25c46c9c1d2a1bc7a9747cff69471bf1ab7dc61e75c4553c7bbcaa805
+Section: Axs-Tweaks
+Description: 自定义锁屏和桌面壁纸，支持图片、视频及 .tendies 交互壁纸素材。
+Author: Axs
+Icon: https://axs66.github.io/pro/icon/tendiesx.png
+Name: TendiesX
+Sileodepiction: https://axs66.github.io/pro/sileodepiction/tendiesx/js.json
+
 Package: com.axs.touchtrail
 Version: 5.2.0-56
 Architecture: iphoneos-arm64
@@ -1094,16 +1112,16 @@ Sileodepiction: https://axs66.github.io/pro/sileodepiction/touchtrail/js.json
 
 Package: com.axs.tweakshub
 Version: 5.2.0-88
-Architecture: iphoneos-arm64e
+Architecture: iphoneos-arm64
 Maintainer: Axs <qiaozhani000@163.com>
 Installed-Size: 728
 Depends: mobilesubstrate, preferenceloader
 Conflicts: com.nightwind.onesettings, com.creaturecoding.shuffle, com.sop.settingsrevamp, com.hk.settingsrevamp, com.dao.settingsrevamp, byg.iosios.net.settingsrevamp
-Filename: ./debs/com.axs.tweakshub_5.2.0-88_iphoneos-arm64e.deb
-Size: 68682
-MD5sum: 451e3da291a234cb3cb96a3f693c2294
-SHA1: 6d5245640913b441f56b631ebed43ae5e9e94f36
-SHA256: 4d4a84f4ce6480f768d3106aacdac1ae43235ecf51089e9b81a4bff894814cc2
+Filename: ./debs/com.axs.tweakshub_5.2.0-88_iphoneos-arm64.deb
+Size: 68756
+MD5sum: 62d412e63ad0014bfabbee2a527749a2
+SHA1: e449a8a9e6ceb985b80c180dda0e0ad81d05eae5
+SHA256: 682c0de9641abc4e856d2ab886b4f73bd63adff47679619e212f3261faeeb65b
 Section: Axs-Tweaks
 Description: 集中收纳统一管理越狱插件与第三方 App 设置，支持插件自定义名称和图标。
  * 设置首页同组并排两个入口：越狱插件 + 应用软件
@@ -1121,16 +1139,16 @@ Sileodepiction: https://axs66.github.io/pro/sileodepiction/tweakshub/js.json
 
 Package: com.axs.tweakshub
 Version: 5.2.0-88
-Architecture: iphoneos-arm64
+Architecture: iphoneos-arm64e
 Maintainer: Axs <qiaozhani000@163.com>
 Installed-Size: 728
 Depends: mobilesubstrate, preferenceloader
 Conflicts: com.nightwind.onesettings, com.creaturecoding.shuffle, com.sop.settingsrevamp, com.hk.settingsrevamp, com.dao.settingsrevamp, byg.iosios.net.settingsrevamp
-Filename: ./debs/com.axs.tweakshub_5.2.0-88_iphoneos-arm64.deb
-Size: 68756
-MD5sum: 62d412e63ad0014bfabbee2a527749a2
-SHA1: e449a8a9e6ceb985b80c180dda0e0ad81d05eae5
-SHA256: 682c0de9641abc4e856d2ab886b4f73bd63adff47679619e212f3261faeeb65b
+Filename: ./debs/com.axs.tweakshub_5.2.0-88_iphoneos-arm64e.deb
+Size: 68682
+MD5sum: 451e3da291a234cb3cb96a3f693c2294
+SHA1: 6d5245640913b441f56b631ebed43ae5e9e94f36
+SHA256: 4d4a84f4ce6480f768d3106aacdac1ae43235ecf51089e9b81a4bff894814cc2
 Section: Axs-Tweaks
 Description: 集中收纳统一管理越狱插件与第三方 App 设置，支持插件自定义名称和图标。
  * 设置首页同组并排两个入口：越狱插件 + 应用软件
