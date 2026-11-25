@@ -20,7 +20,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deploy_primary.outputs.page_url }}
     runs-on: ubuntu-latest
 
     steps:
@@ -43,12 +43,39 @@ jobs:
           ls -l Packages*
 
       - name: Commit updated Packages
+        shell: bash
         run: |
           git config --local user.name "github-actions"
           git config --local user.email "actions@github.com"
+
+          regen() {
+            rm -f ./Packages ./Packages.bz2 ./Packages.gz ./Packages.xz ./Packages.zst
+            dpkg-scanpackages -m ./debs > ./Packages
+            bzip2 -fks Packages
+            gzip -fk Packages
+            xz -f -k -9e Packages
+            zstd -f -19 -k Packages -o Packages.zst
+          }
+
           git add Packages Packages.bz2 Packages.gz Packages.xz Packages.zst
           git commit -m "Update Packages" || echo "No changes to commit"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git HEAD:main
+
+          for i in 1 2 3 4 5; do
+            if git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git HEAD:main; then
+              echo "Pushed updated Packages (attempt $i)"
+              exit 0
+            fi
+            echo "::warning::push rejected on attempt $i, rebasing onto origin/main and regenerating Packages"
+            git fetch origin main
+            git reset --hard origin/main
+            regen
+            git add Packages Packages.bz2 Packages.gz Packages.xz Packages.zst
+            git commit -m "Update Packages" || echo "No changes to commit"
+            sleep 3
+          done
+
+          echo "::error::failed to push updated Packages after 5 attempts"
+          exit 1
 
       - name: Check Pages build type
         id: pages-check
@@ -79,10 +106,17 @@ jobs:
 
       - name: Deploy to GitHub Pages
         if: steps.pages-check.outputs.build_type == 'workflow'
+        id: deploy_primary
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+
+      - name: Deploy to GitHub Pages (retry)
+        if: steps.pages-check.outputs.build_type == 'workflow' && steps.deploy_primary.outcome == 'failure'
         id: deployment
         uses: actions/deploy-pages@v4
 
       - name: Cleanup old workflow runs
+        if: always()
         uses: actions/github-script@v7
         with:
           script: |
